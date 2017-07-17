@@ -37,7 +37,7 @@ def writePage(html, filename):
     # 这种写法不用关闭
     path = r"E:/python爬虫/day01/" + filename
     # 2.版本对中文编码支持不够
-    uipath = unicode(path, "utf8")
+    uipath = unicode(filename, "utf8")
     with open(uipath, 'wb') as f:
         f.write(html)
     print "-" * 20
