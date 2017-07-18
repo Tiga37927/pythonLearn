@@ -33,7 +33,11 @@ import re
 # print m
 
 # sub方法是替换,这里的正则是分组的意思，分两组，会按空格分开，从开始匹配
-pattern = re.compile(r"(\w+) (\w+)")
-str = "hello 123456, xxx ddd"
-m = pattern.sub(r"\1 \2", str)
-print m
+# pattern = re.compile(r"(\w+) (\w+)")
+# str = "hello 123456, xxx ddd"
+# m = pattern.sub(r"\1 \2", str)
+# print m
+pattern = re.compile(r'[\d]{12}.+')
+str = "/Uploads/joke/2017/6183/baoxiao/201706183794.png"
+m = pattern.search(str)
+print m.group()
